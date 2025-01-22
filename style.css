@@ -17,6 +17,10 @@ header .navbar {
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     margin-bottom: 1%;
+    /* position: relative; */
+}
+.drpdwn {
+    display: none;
 }
 .logo {
     display: flex;
@@ -113,11 +117,13 @@ header .navbar {
 .crd h3 {
     font-size: 1.8vw;
     margin-bottom: 10%;
+    color: #202020;
 }
 .crd p {
     font-size: 1.3vw;
     margin-bottom: 10%;
     padding: 0 10%;
+    color: #808080;
 }
 .crd button {
     font-size: 1.3vw;
@@ -149,9 +155,11 @@ header .navbar {
 .scrdviw {
     display: grid;
     grid-template-columns: 1.8fr 1fr 1fr;
-    grid-template-rows: max-content max-content;
+    /* grid-template-rows: max-content max-content; */
     row-gap: 4%;
     column-gap: 2%;
+    position: relative;
+    /* z-index: 1; */
 }
 .scrdviw img {
     width: 100%;
@@ -173,7 +181,7 @@ header .navbar {
     font-size: 1.8vw;
 }   
 .scrdm p {
-    padding: 7%;
+    padding: 2% 7% 10%;
     font-size: 1.2vw;
 }
 
@@ -183,49 +191,50 @@ header .navbar {
     overflow: hidden;
 }
 .scrd h3 {
-    padding: 7%;
+    padding: 10% 6% 0;
     font-size: 1.4vw;
-}
-.scrdviw {
-    position: relative;
-    z-index: 1;
 }
 .scrdviw button {
     border: none;
     border-radius: 25px;
     padding: 0.7vw 1.3vw;
     position: absolute;
-    z-index: 2; 
+    /* z-index: 2;  */
 }
 #b1 {
     left: 7%;
     bottom: 42%;
     padding: 0.7vw 1.3vw;
     font-size: 1.2vw;
+    background-color: #3CD8E8;
 }
 #b2 {
     left: 50%;
     bottom: 69%;
     padding: 0.7vw 1.3vw;
     font-size: 0.8vw;
+    background-color: #95B226;
 }
 #b3 {
     left: 77%;
     bottom: 69%;
     padding: 0.7vw 1.3vw;
     font-size: 0.8vw;
+    background-color: #5D58F0;
 }
 #b4 {
     left: 50%;
-    bottom: 18%;
+    bottom: 16%;
     padding: 0.7vw 1.3vw;
     font-size: 0.8vw;
+    background-color: orange;
 }
 #b5 {
     left: 77%;
-    bottom: 18%;
+    bottom: 16%;
     padding: 0.7vw 1.3vw;
     font-size: 0.8vw;
+    background-color: #95B226;
 }
 .blk_pmrybtn {
     margin: 8% 0 3% ;
@@ -289,5 +298,222 @@ footer {
     width: 2.4vw;
 }
 
-
+/* ------------------------------------------------------------------------------------------------------------- */
 /* Mobile device  */
+@media screen and (max-width: 550px) {
+    body {
+        margin: 3% 3vw 0%;
+    }
+    .arwbtn, .navbtn, .logo h1{
+        display: none;
+    }
+/* nav bar  */
+    .navbar img{
+        width: 8vw;
+    }
+    .org_pmrybtn {
+        display: none;
+    }
+    header .navbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        /* border-bottom: 1px solid orange; */
+    }
+    .drpdwn {
+        position: relative;
+        display: block;
+        width: max-content;
+        justify-self: right;
+        
+    }
+    .drpdwn .drpitm{
+        position: absolute;
+        right: 10%; 
+        top: 70%;
+        list-style: none;
+        display: none;
+        color: white;
+        background-color: #01ACFD;
+        padding: 30%;
+        font-size: 3vw;
+        border-radius: 10px;
+    }
+    .drpitm li {
+        font-size: 5vw;
+        margin-bottom: 5%;
+        border-bottom: 1px solid white;
+    }
+     .drpdwn:hover .drpitm{
+        display: block;
+    }
+/* nav bar finish  */
+
+/* hero  */
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    .himg {
+        grid-row: 1;
+        justify-self: center;
+    }
+    .himg img {
+        width:80vw;
+    }
+    .htext {
+        grid-row: 2;
+        padding: 0;
+        justify-self: center;
+        text-align: center;
+    }
+    .htext h1 {
+        font-size: 7vw;
+    }
+    .htext p {
+        font-size: 3vw;
+    }
+    .blk_pmrybtn{
+        font-size: 4vw;
+        padding: 2vw 6vw;
+        margin: 5% 0;
+    }
+
+/* hero finish */
+
+/* .curriculum  */
+    .crdctnr {
+        grid-template-columns: 1fr;
+    }
+    #lstxt {
+        font-size: 6vw;
+    }
+    .crd {
+        width: 90%;
+        margin-bottom: 5%;
+    }
+    .crd img {
+        width: 35%;
+        margin: 10% 0;
+    }
+    .crd h3 {
+        font-size: 4vw;
+        margin: 5% 0;
+    }
+    .crd p {
+        font-size: 3vw;
+        margin: 5% 0;
+        line-height: 6vw;
+        padding: 0 20%;
+    }
+    .crd button {
+        font-size: 3vw;
+        margin: 5% 0 10%;
+    }
+
+/* .curriculum finish */
+
+/* our story  */
+    .scrdm {
+        display: none;
+    }
+    #ourtxt {
+        font-size: 6vw;
+    }
+    .scrdviw {
+        grid-template-columns: 1fr 1fr;
+    }
+    .scrd h3{
+        font-size: 3vw;
+        margin: 0 0 10%;
+        padding-top: 10%;
+    }
+    #b2 {
+        font-size: 2vw;
+        padding: 1.5% 3.2%;
+        left: 4%;
+        bottom: 67%;
+    }
+    #b3 {
+        font-size: 2vw;
+        padding: 1.5% 3.2%;
+        left: 55%;
+        bottom: 67%;
+    }
+    #b4 {
+        font-size: 2vw;
+        padding: 1.5% 3.2%;
+        left: 4%;
+        bottom: 14%;
+    }
+    #b5 {
+        font-size: 2vw;
+        padding: 1.5% 3.2%;
+        left: 55%;
+        bottom: 14%;
+    }
+    
+
+/* our story finish */
+
+/* footer  */
+    footer {
+        grid-template-columns: 1fr;
+    }
+    .flogo {
+        grid-template-columns: 1fr;
+        grid-row: 1;
+        margin: 0;
+        padding: 0 15% 0 7%;
+        font-size: 4vw;
+    }
+    .flogo img {
+        height: 15vw;
+    }
+    #n1 {
+        grid-template-columns: 1fr;
+        grid-row: 2;
+        margin: 4% 0%;
+        padding: 0 10% 0 9%;
+        font-size: 3vw;
+    }
+    .fabout {
+        grid-template-columns: 1fr;
+        grid-row: 3;
+        margin: 0;
+        padding: 0 15% 0 9.4%;
+    }
+    .fabout h3 {
+        margin: 0 0 3%;
+        font-size: 4vw;
+    }
+    
+    #n2 {
+        grid-template-columns: 1fr;
+        grid-row: 4;
+        margin: 0;
+        padding: 0 15% 0 7%;
+    }
+    #n2 h4 {
+        font-size: 4vw;
+        padding: 0 0 0 3.1%;
+    }
+    .ftouch {
+        grid-template-columns: 1fr;
+        grid-row: 5;
+        margin: 0;
+        padding: 0 15% 0 7%;
+    }
+    .ftouch h3 {
+        font-size: 4vw;
+        padding: 0 3%;
+    }
+    .socialicon {
+        grid-template-columns: 1fr;
+        grid-row: 6;
+        margin: 0;
+        padding: 0 15% 0 9%;
+    }
+    .socialicon img {
+        width: 7vw;
+    }
+}
