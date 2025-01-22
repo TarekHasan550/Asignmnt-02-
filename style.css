@@ -8,7 +8,7 @@ body {
     font-family: 'quicksand', serif;
     background-image: url(assets/bg.png);
     background-position: bottom;
-    background-repeat: repeat-x;
+    background-size: cover;
 }
 
 /* hover section  */
@@ -145,6 +145,7 @@ header .navbar {
 .curriculum {
     text-align: center;  
     background-image: url(assets/bg.png);
+    background-size: cover;
 }
 #lstxt{
     margin: 3% 0 6%;
@@ -386,12 +387,8 @@ footer {
 /* ------------------------------------------------------------------------------------------------------------- */
 /* Mobile device  */
 @media screen and (max-width: 550px) {
-    html {
-        overflowX: hidden;
-    }
     body {
         margin: 3% 3vw 0%;
-        overflowX: hidden;
     }
     .arwbtn, .navbtn, .logo h1{
         display: none;
@@ -433,8 +430,9 @@ footer {
     }
     .drpitm li {
         font-size: 5vw;
-        margin-bottom: 5%;
+        margin-bottom: 8%;
         border-bottom: 1px solid white;
+        line-height: 150%;
     }
      .drpdwn:hover .drpitm{
         display: block;
@@ -499,8 +497,11 @@ footer {
         padding: 0 20%;
     }
     .crd button {
-        font-size: 3vw;
+        font-size: 4vw;
         margin: 5% 0 10%;
+    }
+    .scrltxt {
+        font-size: 3.5vw;
     }
 
 /* .curriculum finish */
@@ -519,33 +520,33 @@ footer {
         grid-template-columns: 1fr 1fr;
     }
     .scrd h3{
-        font-size: 3vw;
-        margin: 0 0 10%;
+        font-size: 2.5vw;
+        margin: 0 0 15%;
         padding-top: 10%;
     }
     #b2 {
         font-size: 2vw;
         padding: 1.5% 3.2%;
         left: 4%;
-        bottom: 71%;
+        bottom: 68%;
     }
     #b3 {
         font-size: 2vw;
         padding: 1.5% 3.2%;
         left: 55%;
-        bottom: 71%;
+        bottom: 68%;
     }
     #b4 {
         font-size: 2vw;
         padding: 1.5% 3.2%;
         left: 4%;
-        bottom: 20%;
+        bottom: 15%;
     }
     #b5 {
         font-size: 2vw;
         padding: 1.5% 3.2%;
         left: 55%;
-        bottom: 20%;
+        bottom: 15%;
     }
     
 
