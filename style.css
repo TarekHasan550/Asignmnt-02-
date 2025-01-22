@@ -11,6 +11,56 @@ body {
     background-repeat: repeat-x;
 }
 
+/* hover section  */
+.navbtn button:hover  {
+    color: white !important;
+    filter: drop-shadow(0 0 5px black);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.org_pmrybtn button:hover  {
+    color: black !important;
+    background-color: transparent;
+    border: 1px solid orange;
+    box-shadow: 0 0 10px orange;
+    transform: scale(0.86,0.9);
+    cursor: pointer;
+}
+.blk_pmrybtn:hover  {
+    position: relative;
+    color: black !important;
+    background-color: transparent;
+    border: 1px solid black;
+    box-shadow: 0 0 10px black;
+    transform: scale(0.86,0.9);
+    cursor: pointer;
+}
+
+.arwbtn img:hover  {
+    filter: drop-shadow(0 0 8px rgb(180, 119, 6));
+    cursor: pointer;
+}
+.crd button:hover  {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.485));
+    cursor: pointer;
+}
+.scrdm button:hover, .scrd button:hover  {
+    color: black !important;
+    border: 1px solid black;
+    box-shadow: 0 0 10px black;
+    transform: scale(0.9,0.95);
+    cursor: pointer;
+}
+#n2 h4:hover, .socialicon img:hover {
+    color: black;
+    cursor: pointer;
+    filter: drop-shadow(0 0 3px black);
+}
+.scrdm:hover, .scrd:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.618);
+}
+/* hover section finish */
+
 /* navbar */
 header .navbar {
     display: grid;
@@ -277,21 +327,25 @@ footer {
     font-size: 1vw;
     font-weight: 200;
 }
+#n1 p {
+    font-size: 1.2vw;
+}
 .fabout, #n2 {
     padding-left: 30%;
 }
 .fabout h3 {
     margin: 8% 0 0;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
 }
 #n2 h4 {
     margin: 0 0 4%;
-    font-size: 1vw;
+    font-size: 1.2vw;
     font-weight: 300;
+    width: max-content;
 }
 .ftouch h3{
     margin: 5% 0 8%;
-    font-size: 1.3vw;
+    font-size: 1.8vw;
 }
 .ftouch img{
     margin: 0 3% 0 0;
@@ -301,8 +355,12 @@ footer {
 /* ------------------------------------------------------------------------------------------------------------- */
 /* Mobile device  */
 @media screen and (max-width: 550px) {
+    html {
+        overflowX: hidden;
+    }
     body {
         margin: 3% 3vw 0%;
+        overflowX: hidden;
     }
     .arwbtn, .navbtn, .logo h1{
         display: none;
@@ -413,6 +471,9 @@ footer {
 /* .curriculum finish */
 
 /* our story  */
+    .strycrd {
+        margin: 0 -3vw !important;
+    }
     .scrdm {
         display: none;
     }
@@ -458,12 +519,13 @@ footer {
 /* footer  */
     footer {
         grid-template-columns: 1fr;
+        margin: 0 -3vw;
     }
     .flogo {
         grid-template-columns: 1fr;
         grid-row: 1;
         margin: 0;
-        padding: 0 15% 0 7%;
+        padding: 0 0% 0 7%;
         font-size: 4vw;
     }
     .flogo img {
@@ -472,15 +534,18 @@ footer {
     #n1 {
         grid-template-columns: 1fr;
         grid-row: 2;
-        margin: 4% 0%;
-        padding: 0 10% 0 9%;
-        font-size: 3vw;
+        margin: 4% 10% 0 0;
+        padding: 0 0% 0 9%;
+    }
+    #n1 p {
+        font-size: 4vw;
+
     }
     .fabout {
         grid-template-columns: 1fr;
         grid-row: 3;
         margin: 0;
-        padding: 0 15% 0 9.4%;
+        padding: 0 0% 0 9.4%;
     }
     .fabout h3 {
         margin: 0 0 3%;
@@ -491,7 +556,7 @@ footer {
         grid-template-columns: 1fr;
         grid-row: 4;
         margin: 0;
-        padding: 0 15% 0 7%;
+        padding: 0 0% 0 7%;
     }
     #n2 h4 {
         font-size: 4vw;
@@ -501,7 +566,7 @@ footer {
         grid-template-columns: 1fr;
         grid-row: 5;
         margin: 0;
-        padding: 0 15% 0 7%;
+        padding: 0 0% 0 7%;
     }
     .ftouch h3 {
         font-size: 4vw;
@@ -511,7 +576,7 @@ footer {
         grid-template-columns: 1fr;
         grid-row: 6;
         margin: 0;
-        padding: 0 15% 0 9%;
+        padding: 0 0% 0 9%;
     }
     .socialicon img {
         width: 7vw;
